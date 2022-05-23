@@ -18,3 +18,19 @@ after_success:
   - docker push jerry4013/multi-nginx
   - docker push jerry4013/multi-server
   - docker push jerry4013/multi-worker
+
+
+  # Access key ID: AKIAS4ND5TOAXN6QYHBG
+  # Secret Access Key: 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
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-east-1'
+  app: 'multi-docker'
+  env: 'Multidocker-env'
+  bucket_name: 'elasticbeanstalk-us-east-1-198449142657'
+  bucket_path: 'docker-multi'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
