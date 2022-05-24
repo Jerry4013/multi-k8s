@@ -19,7 +19,6 @@ after_success:
   - docker push jerry4013/multi-server
   - docker push jerry4013/multi-worker
 
-
   # Access key ID: AKIAS4ND5TOAXN6QYHBG
   # Secret Access Key: 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
 
