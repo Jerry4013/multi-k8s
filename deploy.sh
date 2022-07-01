@@ -2,13 +2,13 @@ docker build -t jerry4013/multi-client:latest -t jerry4013/multi-client:$SHA -f 
 docker build -t jerry4013/multi-server:latest -t jerry4013/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t jerry4013/multi-worker:latest -t jerry4013/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
-docker puth jerry4013/multi-client:latest
-docker puth jerry4013/multi-server:latest
-docker puth jerry4013/multi-worker:latest
+docker push jerry4013/multi-client:latest
+docker push jerry4013/multi-server:latest
+docker push jerry4013/multi-worker:latest
 
-docker puth jerry4013/multi-client:$SHA
-docker puth jerry4013/multi-server:$SHA
-docker puth jerry4013/multi-worker:$SHA
+docker push jerry4013/multi-client:$SHA
+docker push jerry4013/multi-server:$SHA
+docker push jerry4013/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl apply -f k8s
